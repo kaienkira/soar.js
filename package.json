@@ -1,0 +1,32 @@
+{
+  "name": "soar.js",
+  "version": "0.0.1",
+  "description": "BrickredStudio javascript game framework",
+  "main": "./bin/soar.min.js",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaienkira/soar.js.git"
+  },
+  "author": "kaienkira@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaienkira/soar.js/issues"
+  },
+  "homepage": "https://github.com/kaienkira/soar.js#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  }
+}
