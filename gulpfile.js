@@ -3,6 +3,7 @@
 var babel = require('babelify');
 var browserify = require('browserify');
 var gulp = require('gulp');
+var eslint = require('gulp-eslint');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var buffer = require('vinyl-buffer');
@@ -12,6 +13,7 @@ var watchify = require('watchify');
 gulp.task('default', ['build']);
 gulp.task('build', function() { build(false); });
 gulp.task('watch', function() { build(true); });
+gulp.task('lint', function() { lint(); });
 
 function build(watch) {
     var browserifyOpt = {
@@ -47,4 +49,10 @@ function build(watch) {
     }
 
     return compile(b);
+}
+
+function lint() {
+    return gulp.src('./src/**/*.js')
+        .pipe(eslint())
+        .pipe(eslint.format());
 }
