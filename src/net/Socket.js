@@ -1,4 +1,4 @@
-export default class WebSocket
+export default class Socket
 {
     constructor()
     {
