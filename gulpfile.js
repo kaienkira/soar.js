@@ -11,7 +11,7 @@ var source = require('vinyl-source-stream');
 var watchify = require('watchify');
 
 gulp.task('default', ['build']);
-gulp.task('build', function() { build(false); });
+gulp.task('build', ['lint'], function() { build(false); });
 gulp.task('watch', function() { build(true); });
 gulp.task('lint', function() { lint(); });
 
@@ -31,7 +31,7 @@ function build(watch) {
         b = watchify(b);
         b.on('update', function() { compile(b); });
     }
-    b = b.transform(babel);
+    b = b.transform(babel, {presets: ["es2015"]});
 
     function printError(msg) {
         console.log(msg);
