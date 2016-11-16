@@ -1,6 +1,5 @@
 export default class Socket
 {
-    constructor()
-    {
+    constructor() {
     }
 }
